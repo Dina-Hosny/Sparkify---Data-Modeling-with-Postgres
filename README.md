@@ -55,21 +55,21 @@ A star schema optimized for queries on song play analysis. It was created using 
 - PostgreSQL server.
 
 ## Project Steps:
-1- Planing for the database schema.
-2- Write the SQL queries: create, drop, and select statments.
-3- Create the Postgres database.
-4- Develop the ETL processes for each table.
-5- Build the ETL pipelines.
-6- Test the results.
+- 1- Planing for the database schema.
+- 2- Write the SQL queries: create, drop, and select statments.
+- 3- Create the Postgres database.
+- 4- Develop the ETL processes for each table.
+- 5- Build the ETL pipelines.
+- 6- Test the results.
 
 ## How To Run The Project?
 
-1- Install Python 3.
-2- Install PostgreSQL
-3- Download the scripts and the datasets.
-4- Run ```create_tables.py`` file to create the database and its tables.
-5- Run ```etl.py``` to load the data into the database tables.
-6- Run ```test.ipynb``` to view the results.
+- 1- Install Python 3.
+- 2- Install PostgreSQL
+- 3- Download the scripts and the datasets.
+- 4- Run ```create_tables.py`` file to create the database and its tables.
+- 5- Run ```etl.py``` to load the data into the database tables.
+- 6- Run ```test.ipynb``` to view the results.
 
 ## Screnshots:
 
