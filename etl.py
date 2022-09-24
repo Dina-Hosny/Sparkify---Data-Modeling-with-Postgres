@@ -6,6 +6,16 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
+    """
+    This procedure processes a song file whose filepath has been provided as an arugment.
+    It extracts the song information in order to store it into the songs table.
+    Then it extracts the artist information in order to store it into the artists table.
+
+    INPUTS: 
+    * cur the cursor variable
+    * filepath the file path to the song file
+    """
+
     # open song file
     df = pd.read_json(filepath, lines=True)
 
@@ -20,6 +30,16 @@ def process_song_file(cur, filepath):
 
 
 def process_log_file(cur, filepath):
+
+    """
+    This procedure processes a log file whose filepath has been provided as an arugment.
+    It extracts the log information then it extracts the time and users information in order to store it into the users and time table.
+
+    INPUTS: 
+    * cur the cursor variable
+    * filepath the file path to the log file
+    """
+
     # open log file
     df = pd.read_json(filepath, lines=True)
 
@@ -30,7 +50,7 @@ def process_log_file(cur, filepath):
     t = pd.to_datetime(df['ts'], unit='ms')
     
     # insert time data records
-    time_data = list((t, t.dt.hour, t.dt.day, t.dt.day_of_week, t.dt.month, t.dt.year, t.dt.weekday))
+    time_data = list((t, t.dt.hour, t.dt.day, t.dt.dayofweek, t.dt.month, t.dt.year, t.dt.weekday))
     column_labels = list(('start_time', 'hour', 'day', 'week', 'month', 'year', 'weekday'))
     time_df = pd.DataFrame.from_dict(dict(zip(column_labels, time_data))) 
 
@@ -52,16 +72,27 @@ def process_log_file(cur, filepath):
         results = cur.fetchone()
         
         if results:
-            songid, artistid = results
+            song_id, artist_id = results
         else:
-            songid, artistid = None, None
+            song_id, artist_id = 'None', 'None'
 
         # insert songplay record
-        songplay_data = (pd.to_datetime(row.ts, unit='ms'), row.userId, row.level, songid, artistid, row.sessionId, row.location, row.userAgent)
+        songplay_data = (pd.to_datetime(row.ts, unit='ms'), row.userId, row.level, song_id, artist_id, row.sessionId, row.location, row.userAgent)
         cur.execute(songplay_table_insert, songplay_data)
 
 
 def process_data(cur, conn, filepath, func):
+
+    """
+    This function get all JSON files from the the directory and store it in an array.
+
+    INPUTS: 
+    * cur the cursor variable
+    * conn the connection data with Postgres database
+    * filepath the file path
+    * func the process that we need to apply on the files
+    """
+
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
@@ -81,7 +112,7 @@ def process_data(cur, conn, filepath, func):
 
 
 def main():
-    conn = psycopg2.connect("dbname=sparkifydb user=postgres password=Dina123")
+    conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=postgres password=Dina123")
     cur = conn.cursor()
 
     process_data(cur, conn, filepath='data/song_data', func=process_song_file)
