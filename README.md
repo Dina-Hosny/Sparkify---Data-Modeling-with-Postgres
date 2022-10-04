@@ -67,7 +67,7 @@ A star schema optimized for queries on song play analysis. It was created using 
 - 1- Install Python 3.
 - 2- Install PostgreSQL
 - 3- Download the scripts and the datasets.
-- 4- Run ```create_tables.py`` file to create the database and its tables.
+- 4- Run ```create_tables.py``` file to create the database and its tables.
 - 5- Run ```etl.py``` to load the data into the database tables.
 - 6- Run ```test.ipynb``` to view the results.
 
