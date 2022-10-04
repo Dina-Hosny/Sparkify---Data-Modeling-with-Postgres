@@ -26,7 +26,7 @@ In this project, I built an ETL pipeline using Python, created a Postgres databa
 
 ## Project Details:
 
-The project purpose is analyze the Sparkify collected data on songs and user activity on their new music streaming app, to understand what songs users are listening to, by creating a Postgres database with tables designed to optimize queries on song play analysis.
+The project purpose is to analyze the Sparkify collected data on songs and user activity on their new music streaming app, to understand what songs users are listening to, by creating a Postgres database with tables designed to optimize queries on song play analysis.
 
 For this analysis; I created a database schema and ETL pipeline. then tested the database and ETL pipeline by running given queries by the analytics team from Sparkify and compare the results with their expected results.
 
