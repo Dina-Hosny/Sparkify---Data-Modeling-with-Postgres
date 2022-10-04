@@ -56,7 +56,7 @@ A star schema optimized for queries on song play analysis. It was created using 
 
 ## Project Steps:
 - 1- Planing for the database schema.
-- 2- Write the SQL queries: create, drop, and select statments.
+- 2- Write the SQL queries: create, drop, and select statements.
 - 3- Create the Postgres database.
 - 4- Develop the ETL processes for each table.
 - 5- Build the ETL pipelines.
