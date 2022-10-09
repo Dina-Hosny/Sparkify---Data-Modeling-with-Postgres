@@ -2,7 +2,7 @@
 # Sparkify - Data Modeling with Postgres
 Sparkify - Data Modeling with Postgres - Udacity Data Engineering Expert Track.
 
-In this project, I built an ETL pipeline using Python, created a Postgres database that contains fact and dimension tables for a star schema for a particular analytic focus (analyze Sparkify's collected data on songs and user activity on their new music streaming app), and wrote an ETL pipeline that transfers data from JSON files in two local directories into these tables in Postgres using Python and SQL.
+In this project, I built an ETL pipeline using Python, and created a Postgres database that contains fact and dimension tables for a star schema for a particular analytic focus which is analyze Sparkify's collected data on songs and user activity on their new music streaming app. Then, wrote an ETL pipeline that transfers data from JSON files in two local directories into these tables in Postgres using Python and SQL.
 
 ## Project Datasets:
 
@@ -26,7 +26,7 @@ In this project, I built an ETL pipeline using Python, created a Postgres databa
 
 ## Project Details:
 
-The project purpose is analyze the Sparkify collected data on songs and user activity on their new music streaming app, to understand what songs users are listening to, by create a Postgres database with tables designed to optimize queries on song play analysis.
+The project purpose is to analyze the Sparkify collected data on songs and user activity on their new music streaming app, to understand what songs users are listening to, by creating a Postgres database with tables designed to optimize queries on song play analysis.
 
 For this analysis; I created a database schema and ETL pipeline. then tested the database and ETL pipeline by running given queries by the analytics team from Sparkify and compare the results with their expected results.
 
@@ -56,7 +56,7 @@ A star schema optimized for queries on song play analysis. It was created using 
 
 ## Project Steps:
 - 1- Planing for the database schema.
-- 2- Write the SQL queries: create, drop, and select statments.
+- 2- Write the SQL queries: create, drop, and select statements.
 - 3- Create the Postgres database.
 - 4- Develop the ETL processes for each table.
 - 5- Build the ETL pipelines.
@@ -67,7 +67,7 @@ A star schema optimized for queries on song play analysis. It was created using 
 - 1- Install Python 3.
 - 2- Install PostgreSQL
 - 3- Download the scripts and the datasets.
-- 4- Run ```create_tables.py`` file to create the database and its tables.
+- 4- Run ```create_tables.py``` file to create the database and its tables.
 - 5- Run ```etl.py``` to load the data into the database tables.
 - 6- Run ```test.ipynb``` to view the results.
 
