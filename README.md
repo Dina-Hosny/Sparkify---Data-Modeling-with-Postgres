@@ -2,7 +2,7 @@
 # Sparkify - Data Modeling with Postgres
 Sparkify - Data Modeling with Postgres - Udacity Data Engineering Expert Track.
 
-In this project, I built an ETL pipeline using Python, created a Postgres database that contains fact and dimension tables for a star schema for a particular analytic focus (analyze Sparkify's collected data on songs and user activity on their new music streaming app), and wrote an ETL pipeline that transfers data from JSON files in two local directories into these tables in Postgres using Python and SQL.
+In this project, I built an ETL pipeline using Python, and created a Postgres database that contains fact and dimension tables for a star schema for a particular analytic focus (analyze Sparkify's collected data on songs and user activity on their new music streaming app). Then, wrote an ETL pipeline that transfers data from JSON files in two local directories into these tables in Postgres using Python and SQL.
 
 ## Project Datasets:
 
